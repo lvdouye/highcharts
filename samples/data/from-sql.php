@@ -67,10 +67,10 @@ if ($range < 2 * 24 * 3600 * 1000) {
 $sql = "
 	select 
 		unix_timestamp(datetime) * 1000 as datetime,
-		open,
-		high,
-		low,
-		close
+		'开盘',
+		'高值',
+		'低值',
+		'闭盘'
 	from $table 
 	where datetime between '$startTime' and '$endTime'
 	order by datetime
